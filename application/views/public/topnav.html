@@ -1,0 +1,11 @@
+<div class="topnav" id="ttopnav">
+<?php if(@$this->session->userdata('logged_in')==true) { ?>
+    <a href="/project/Home/mypage">Mypage</a>
+    <a href="#" onclick="javascript:logout()">Logout</a>
+<? } else { ?>
+    <a href="#" onclick="javascript:loginform();">Login</a>
+    <a href="#" onclick="javascript:addBoard();">Create Account</a>
+    <a href="/project/Home/checkOrder" >Check OrderNum</a>
+<? } ?>
+    <a href="/project/Cart/index" >Cart</a> 
+</div>

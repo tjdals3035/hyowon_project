@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Lato, 'sans-serif';
+  outline: #3498db;
+}
+
+.site-wrapper {
+  margin-top: 30px;
+  height: 900px;
+  background-color: #f1f1f1;
+  padding: 30px 70px;
+}
+
+.site-buy {
+  margin-top: 30px;
+  height: 300px;
+  background-color: #f1f1f1;
+  padding: 30px 70px;
+}
+
+.site-login {
+  margin-top: 30px;
+  height: 500px;
+  background-color: #f1f1f1;
+  padding: 30px 70px;
+}
+
+.signup-form-container {
+  width: 320px;
+  margin: 0 auto;
+}
+.signup-form-header h1 {
+  font-size: 32px;
+}
+.signup-form-header h1 + p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.signup-form-body {
+  padding: 20px 0;
+}
+
+.signup-form-body form {
+  width: 100%;
+}
+
+#signup-form p {
+  margin: 10px 0;
+}
+#signup-form p label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+#signup-form p input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+#signup-form p input:focus {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border-color: #555;
+}
+
+#signup-form p input[type="submit"] {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input#btn2 {
+    background: #555; color: #fff; transition: all 0.2s;
+}
+input#btn2:hover {
+    opacity: 0.3;
+}
+input#btn2:active {
+    opacity: 0.3;
+}
+
+.signup-form-footer {
+  text-align: center;
+}
+.signup-form-footer p {
+  color: #555;
+}
+.signup-form-footer p a {
+  color: #555;
+}
+
+.selectbox{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}

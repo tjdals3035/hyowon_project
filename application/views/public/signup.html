@@ -1,0 +1,84 @@
+<div class="site-wrapper" id="signup" style="display:none">
+  <div class="signup-form-container">
+
+    <header class="signup-form-header">
+      <h1>会員登録</h1>
+    </header>
+
+    <main class="signup-form-body">
+
+      <div id="signup-form" >
+        <p>
+          <label>会員ID</label>
+          <input type="text" id="id" name="id" placeholder="会員IDを入力してください。" required />
+        </p>
+
+        <p>
+          <label>パスワード</label>
+          <input type="password" id="pw" name="pw" placeholder="パスワードを入力してください。" required />
+        </p>
+
+        <p>
+          <label>お名前</label>
+          <input type="text" id="name" name="name" placeholder="お名前を入力してください。" required />
+        </p>
+
+        <p>
+          <label>メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="iamsrithan@gmail.com" required />
+        </p>
+
+        <p>
+          <label>郵便番号</label>
+          <input type="text" id="post" name="orderpost" class="post" placeholder="郵便番号を入力してください。" minlength="8" required/>
+        </p>
+
+        <script type="text/javascript">
+          $("#post").change(function(){
+            var post = $('#post').val();
+            var url = "/project/Home/ajax_zipcode/"+post;
+
+            $.ajax({
+                type: 'GET',
+                url: url,
+
+                success: function(res){
+                    if (res === "error") {
+                        alert("郵便番号を確認してください。");
+                    }else{
+                      $('#todoadd').val(res);
+                    }
+                },
+                error: function(request,status,error){
+                    alert("error");
+                    location.reload();
+                }
+            });
+          });
+        </script>
+
+        <p>
+          <label>都道府県</label>
+          <input type="text" id="todoadd" name="add" class="" placeholder="都道府県を入力してください。" minlength="8" required/>
+        </p>
+
+        <p>
+          <label>住所</label>
+          <input type="text" id=address name="address" class="address" placeholder="住所を入力してください。" minlength="8" required/>
+        </p>
+
+        <p>
+          <label>携帯電話</label>
+          <input type="text" id="phone" name="phone" placeholder="携帯電話を入力してください。" minlength="8" required/>
+        </p>
+
+        <p>
+          <input type="submit" name="submit" id="btn2" value="Create Account" onclick="javascript:signin()"/>
+        </p>
+
+      </div>
+
+    </main>
+
+  </div>
+</div>
