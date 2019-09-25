@@ -27,7 +27,7 @@ class Order extends CI_Controller {
 
         $data['items'] = $items;
 
-        if ($this->session->userdata('logged_in')==true){
+        if ($this->session->userdata('logged_in')===true){
             $this->load->model('Home_model');
             $loginID = $this->session->all_userdata()['id'];
             $data['ID_info'] = $this->Home_model->searchIDInfo($loginID);
@@ -105,7 +105,7 @@ class Order extends CI_Controller {
         $itemrow = $this->Home_model->getBuyItem($id);
         $data['item_info'] = $itemrow;
 
-        if ($this->session->userdata('logged_in')==true){
+        if ($this->session->userdata('logged_in')===true){
             $loginID = $this->session->all_userdata()['id'];
             $data['ID_info'] = $this->Home_model->searchIDInfo($loginID);
         }

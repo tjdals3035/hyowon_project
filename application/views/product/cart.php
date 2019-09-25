@@ -114,7 +114,7 @@
                 console.log($("#"+this.id).attr("eachitemtotal"));
             });
 
-            if(itemid_all.length == 0){
+            if(itemid_all.length === 0){
               alert("cart none");
               return;
             }

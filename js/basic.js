@@ -179,7 +179,7 @@
                 data: {mid: mid, mpw: mpw},
                 success: function(res){
 
-                    if(res == "1"){
+                    if(res === "1"){
                         alert("ログインできました");
                         location.reload();
                     }else{

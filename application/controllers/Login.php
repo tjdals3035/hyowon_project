@@ -20,7 +20,7 @@ class Login extends CI_Controller {
         $this->load->model('home_model');
         $res = $this->home_model->logincheck($auth_data);
 
-        if ($res == false) {
+        if ($res === false) {
             echo "2";
         }
         else {

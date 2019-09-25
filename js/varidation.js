@@ -3,7 +3,7 @@ function check() {
     var sel_type = null;
 
     for(var i=0;i<chk_radio.length;i++){
-        if(chk_radio[i].checked == true){
+        if(chk_radio[i].checked === true){
             sel_type = chk_radio[i].value;
         }
     }
@@ -92,7 +92,7 @@ function check() {
         fr.orderaddress.focus();
         return false;
     }
-    else if(sel_type == null){
+    else if(sel_type === null){
         alert("お支払い方法を選択してください");
         return false;
     }

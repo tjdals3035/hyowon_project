@@ -11,7 +11,7 @@
 <h1><a href="/project/Home/index"><span class="abc">Hyocha</span></a></h1>
 
 <div>
-<?php if(@$this->session->userdata('logged_in')==true) { ?>
+<?php if(@$this->session->userdata('logged_in')===true) { ?>
 	<h3><?php echo $this->session->userdata('username') ?>様 welcome</h3>
 <?php }else{ ?>
 	<h3>CUSTOMER様 welcome</h3>
